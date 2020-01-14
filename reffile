@@ -1,0 +1,29 @@
+ansible_user: LocalUsername
+ansible_password: Password
+ansible_connection: winrm
+ansible_winrm_transport: basic
+
+Set-Item -Path WSMan:\localhost\Service\Auth\Basic -Value $true
+
+
+https://docs.ansible.com/ansible/latest/modules/win_copy_module.html
+https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html
+https://docs.ansible.com/ansible/latest/modules/script_module.html
+
+https://docs.ansible.com/ansible/latest/modules/win_shell_module.html
+
+https://argonsys.com/microsoft-cloud/articles/configuring-ansible-manage-windows-servers-step-step/
+
+https://www.linuxtechi.com/manage-windows-host-using-ansible/
+
+ansible winhost -m win_ping
+https://www.linuxtechi.com/manage-windows-host-using-ansible/
+https://www.ansible.com/blog/connecting-to-a-windows-host
+https://docs.ansible.com/ansible/latest/user_guide/windows_winrm.html
+
+https://docs.ansible.com/ansible/latest/user_guide/windows_setup.html
+examples/scripts/ConfigureRemotingForAnsible.ps1
+
+https://github.com/stylersnico/ansible/blob/115aaeb17c4e13d6ef8420acd7143fddbf33ea5f/examples/scripts/ConfigureRemotingForAnsible.ps1
+
+https://www.vultr.com/docs/how-to-install-and-configure-ansible-on-centos-7-for-use-with-windows-server
