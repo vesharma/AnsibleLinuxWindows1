@@ -59,7 +59,7 @@ Now create ansible playbook
     - name: copy script file 
       win_copy:
          src: ConfigureRemotingForAnsible.ps1     # this file exist in linux box and we are copying it on windows c:\tmp
-         dest: c:\tmp\
+         dest: c:TEMP\
 
 #  this is for script execution
     - win_shell: C:\tmp\ConfigureRemotingForAnsible.ps1 >> C:\ConfigureRemotingForAnsible.log.txt
