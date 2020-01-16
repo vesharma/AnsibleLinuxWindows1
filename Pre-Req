@@ -64,7 +64,8 @@ Now create ansible playbook
          dest: c:TEMP\
 
 #  this is for script execution
-    - win_shell: C:\tmp\ConfigureRemotingForAnsible.ps1 >> C:\ConfigureRemotingForAnsible.log.txt
+    #- win_shell: C:\tmp\ConfigureRemotingForAnsible.ps1 >> C:\ConfigureRemotingForAnsible.log.txt
+    - win_command: powershell.exe -ExecutionPolicy ByPass -File C:/temp/powershellscript.ps1
 
 
 ^wq  - for exit
