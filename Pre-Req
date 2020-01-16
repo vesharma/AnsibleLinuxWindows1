@@ -56,6 +56,8 @@ Now create ansible playbook
         path: C:\Temp\folder\subfolder
       state: directory
     
+    #copy from https://www.linuxtechi.com/manage-windows-host-using-ansible/
+    
     - name: copy script file 
       win_copy:
          src: ConfigureRemotingForAnsible.ps1     # this file exist in linux box and we are copying it on windows c:\tmp
