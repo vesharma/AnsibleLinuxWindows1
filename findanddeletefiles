@@ -1,0 +1,39 @@
+---
+  - hosts: all
+    tasks:
+    - name: Ansible delete files from path
+      find:
+        paths: /home/
+        recurse: yes
+        file_type: directory
+        patterns: "*.log"
+        age: "-7d"
+        recurse: yes
+        register: files_to_delete
+    
+    - debug:
+        msg: "{{ files_to_delete.files[0].path }}"
+
+    - name: Ansible delete file glob
+      file:
+        path: "{{ item.path }}"
+        state: absent
+      with_items: "{{ files_to_delete.files }}"
+
+
+https://www.mydailytutorials.com/using-ansible-find-module-search-filesfolder/
+https://docs.ansible.com/ansible/latest/modules/find_module.html#examples
+
+https://stackoverflow.com/questions/33343215/how-to-get-an-arbitrary-remote-users-home-directory-in-ansible
+
+- hosts: all
+  tasks:
+    - name: get user home directory
+      shell: >
+             getent passwd {{ user }}  | awk -F: '{ print $6 }'
+      changed_when: false
+      register: user_home
+
+    - name: debug output
+      debug:
+        var: user_home.stdout
