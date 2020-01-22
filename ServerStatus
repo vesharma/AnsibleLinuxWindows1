@@ -1,0 +1,67 @@
+#!/bin/sh
+
+echo -e "Date"
+date
+
+echo -e "hostname"
+hostname
+cat /etc/hosts |grep -i 10 |grep -v ^#
+echo -e "-----------------------------" '\n'
+echo  -e "redhat release"
+cat /etc/redhat-release
+echo -e "-----------------------------" '\n'
+echo " Redhat Subscription "
+rhn_check
+echo -e "-----------------------------" '\n'
+
+echo " Ifconfig Address"
+ifconfig -a
+echo -e "-----------------------------" '\n'
+
+echo " IP Address"
+ifconfig |grep -i eth* |grep -i  'inet addr:' |awk -F' ' '{print $2}' |grep -i '10'|awk -F':' '{print $2}'
+echo -e "-----------------------------" '\n'
+echo "ethernet configuration"
+cat /etc/sysconfig/network-scripts/ifcfg-eth0
+echo -e "-----------------------------" '\n'
+echo -e "Disk  Layout"
+df -hT
+echo -e "-----------------------------" '\n'
+echo -e "Disk block id"
+blkid
+echo -e "-----------------------------" '\n'
+echo "NFS mount points"
+cat /etc/fstab |grep -i 'NFS'
+echo -e "-----------------------------" '\n'
+echo "Firewall Rules"
+iptables -L
+echo -e "-----------------------------" '\n'
+echo -e "ArcSight Configuration "
+cat /etc/syslog.conf |tail -n 5 |grep -i '@10'
+echo -e "-----------------------------" '\n'
+echo -e "tripwire agent configuration"
+cat /opt/tripwire/te/agent/data/config/agent.properties
+
+echo -e "-----------------------------" '\n'
+echo -e "Arcsight , Sysedge , Tripwire connections"
+
+netstat -tulpn |grep -i '514'
+netstat -tulpn |grep -i 'sysedge'
+netstat -tulpn |grep -i '32000'
+
+echo -e "-----------------------------" '\n'
+echo -e "Server Process Running"
+netstat -tulpn |egrep -I 'httpd | java | jboss  '
+ ps -ef |egrep -I 'httpd | java | jboss  '
+
+ echo -e "-----------------------------" '\n'
+ echo -e "all other connections"
+  netstat -tulpn
+
+  echo -e "------------------------------" '\n'
+  echo -e " Top 20 Memory Process"
+  ps auwx |sort -rnk4 |head -n 20
+
+  echo -e " Top 20 CPU Process"
+  ps auwx |sort -rnk4 |head -n 20
+
