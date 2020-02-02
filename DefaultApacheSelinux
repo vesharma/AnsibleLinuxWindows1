@@ -1,0 +1,14 @@
+[root@localhost ~]# ls -lZd /etc/httpd/*
+drwxr-xr-x. root root system_u:object_r:httpd_config_t:s0 /etc/httpd/conf
+drwxr-xr-x. root root system_u:object_r:httpd_config_t:s0 /etc/httpd/conf.d
+drwxr-xr-x. root root system_u:object_r:httpd_config_t:s0 /etc/httpd/conf.modules.d
+lrwxrwxrwx. root root system_u:object_r:httpd_log_t:s0 /etc/httpd/logs -> ../../var/log/httpd
+lrwxrwxrwx. root root system_u:object_r:httpd_modules_t:s0 /etc/httpd/modules -> ../../usr/lib64/httpd/modules
+lrwxrwxrwx. root root system_u:object_r:httpd_config_t:s0 /etc/httpd/run -> /run/httpd
+[root@localhost ~]#
+[root@localhost ~]# ls -lZd /var/www/
+drwxr-xr-x. root root system_u:object_r:httpd_sys_content_t:s0 /var/www/
+[root@localhost ~]# ls -lZd /var/www/html/
+drwxr-xr-x. root root system_u:object_r:httpd_sys_content_t:s0 /var/www/html/
+[root@localhost ~]# ls -lZd /var/www/html
+drwxr-xr-x. root root system_u:object_r:httpd_sys_content_t:s0 /var/www/html
