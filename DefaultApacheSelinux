@@ -37,12 +37,17 @@ lrwxrwxrwx. root root system_u:object_r:httpd_log_t:s0 /etc/httpd/logs -> ../../
 /etc/httpd/conf:
 -rw-r--r--. root root system_u:object_r:httpd_config_t:s0 httpd.conf
 -rw-r--r--. root root system_u:object_r:httpd_config_t:s0 magic
+[root@localhost ~]# ls -lZ /etc/httpd /var/www/
 
+/etc/httpd:
+drwxr-xr-x. root root system_u:object_r:httpd_config_t:s0 conf
+drwxr-xr-x. root root system_u:object_r:httpd_config_t:s0 conf.d
+drwxr-xr-x. root root system_u:object_r:httpd_config_t:s0 conf.modules.d
+lrwxrwxrwx. root root system_u:object_r:httpd_log_t:s0 logs -> ../../var/log/httpd
+lrwxrwxrwx. root root system_u:object_r:httpd_modules_t:s0 modules -> ../../usr/lib64/httpd/modules
+lrwxrwxrwx. root root system_u:object_r:httpd_config_t:s0 run -> /run/httpd
 
-[root@localhost ~]# ls -lZd /var/www/
-drwxr-xr-x. root root system_u:object_r:httpd_sys_content_t:s0 /var/www/
-[root@localhost ~]# ls -lZd /var/www/html/
-drwxr-xr-x. root root system_u:object_r:httpd_sys_content_t:s0 /var/www/html/
-[root@localhost ~]# ls -lZd /var/www/html
-drwxr-xr-x. root root system_u:object_r:httpd_sys_content_t:s0 /var/www/html
+/var/www/:
+drwxr-xr-x. root root system_u:object_r:httpd_sys_script_exec_t:s0 cgi-bin
+drwxr-xr-x. root root system_u:object_r:httpd_sys_content_t:s0 html
 
