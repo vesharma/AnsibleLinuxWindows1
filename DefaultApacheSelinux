@@ -12,3 +12,37 @@ drwxr-xr-x. root root system_u:object_r:httpd_sys_content_t:s0 /var/www/
 drwxr-xr-x. root root system_u:object_r:httpd_sys_content_t:s0 /var/www/html/
 [root@localhost ~]# ls -lZd /var/www/html
 drwxr-xr-x. root root system_u:object_r:httpd_sys_content_t:s0 /var/www/html
+
+
+[root@localhost ~]# ls -ltrZ /etc/httpd/*
+lrwxrwxrwx. root root system_u:object_r:httpd_config_t:s0 /etc/httpd/run -> /run/httpd
+lrwxrwxrwx. root root system_u:object_r:httpd_modules_t:s0 /etc/httpd/modules -> ../../usr/lib64/httpd/modules
+lrwxrwxrwx. root root system_u:object_r:httpd_log_t:s0 /etc/httpd/logs -> ../../var/log/httpd
+
+/etc/httpd/conf.d:
+-rw-r--r--. root root system_u:object_r:httpd_config_t:s0 welcome.conf
+-rw-r--r--. root root system_u:object_r:httpd_config_t:s0 userdir.conf
+-rw-r--r--. root root system_u:object_r:httpd_config_t:s0 autoindex.conf
+-rw-r--r--. root root system_u:object_r:httpd_config_t:s0 README
+
+/etc/httpd/conf.modules.d:
+-rw-r--r--. root root system_u:object_r:httpd_config_t:s0 01-cgi.conf
+-rw-r--r--. root root system_u:object_r:httpd_config_t:s0 00-systemd.conf
+-rw-r--r--. root root system_u:object_r:httpd_config_t:s0 00-proxy.conf
+-rw-r--r--. root root system_u:object_r:httpd_config_t:s0 00-mpm.conf
+-rw-r--r--. root root system_u:object_r:httpd_config_t:s0 00-lua.conf
+-rw-r--r--. root root system_u:object_r:httpd_config_t:s0 00-dav.conf
+-rw-r--r--. root root system_u:object_r:httpd_config_t:s0 00-base.conf
+
+/etc/httpd/conf:
+-rw-r--r--. root root system_u:object_r:httpd_config_t:s0 httpd.conf
+-rw-r--r--. root root system_u:object_r:httpd_config_t:s0 magic
+
+
+[root@localhost ~]# ls -lZd /var/www/
+drwxr-xr-x. root root system_u:object_r:httpd_sys_content_t:s0 /var/www/
+[root@localhost ~]# ls -lZd /var/www/html/
+drwxr-xr-x. root root system_u:object_r:httpd_sys_content_t:s0 /var/www/html/
+[root@localhost ~]# ls -lZd /var/www/html
+drwxr-xr-x. root root system_u:object_r:httpd_sys_content_t:s0 /var/www/html
+
