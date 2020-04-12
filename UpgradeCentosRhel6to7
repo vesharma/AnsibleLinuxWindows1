@@ -1,0 +1,229 @@
+[root@localhost ~]# preupg -l
+RHEL6_7
+preupg -s RHEL6_7
+
+Preupg tool doesn't do the actual upgrade.
+Please ensure you have backed up your system and/or data in the event of a failed upgrade
+ that would require a full re-install of the system from installation media.
+Do you want to continue? y/n
+y
+Gathering logs used by preupgrade assistant:
+All installed packages : 01/10 ...finished (time 00:00s)
+All changed files      : 02/10 ...finished (time 02:27s)
+Changed config files   : 03/10 ...finished (time 00:00s)
+All users              : 04/10 ...finished (time 00:00s)
+All groups             : 05/10 ...finished (time 00:00s)
+Service statuses       : 06/10 ...finished (time 00:00s)
+All installed files    : 07/10 ...finished (time 00:02s)
+All local files        : 08/10 ...finished (time 00:02s)
+All executable files   : 09/10 ...finished (time 00:01s)
+RedHat signed packages : 10/10 ...finished (time 00:00s)
+Assessment of the system, running checks / SCE scripts:
+001/100 ...done    (Configuration Files to Review)
+002/100 ...done    (File Lists for Manual Migration)
+003/100 ...done    (Bacula Backup Software)
+004/100 ...done    (MySQL configuration)
+005/100 ...done    (Migration of the MySQL data stack)
+006/100 ...done    (General changes in default MySQL implementation)
+007/100 ...done    (PostgreSQL upgrade content)
+008/100 ...done    (GNOME Desktop Environment underwent several design modifications in Red Hat Enterprise Linux 7 release)
+009/100 ...done    (KDE Desktop Environment underwent several design modifications in Red Hat Enterprise Linux 7 release)
+010/100 ...done    (several graphic drivers not supported in Red Hat Enterprise Linux 7)
+011/100 ...done    (several input drivers not supported in Red Hat Enterprise Linux 7)
+012/100 ...done    (several kernel networking drivers not available in Red Hat Enterprise Linux 7)
+013/100 ...done    (several kernel storage drivers not available in Red Hat Enterprise Linux 7)
+014/100 ...done    (Names, Options and Output Format Changes in arptables)
+015/100 ...done    (BIND9 running in a chroot environment check.)
+016/100 ...done    (BIND9 configuration compatibility check)
+017/100 ...done    (Move dhcpd/dhcprelay arguments from /etc/sysconfig/* to *.service files)
+018/100 ...done    (DNSMASQ configuration compatibility check)
+019/100 ...done    (Dovecot configuration compatibility check)
+020/100 ...done    (Compatibility Between iptables and ip6tables)
+021/100 ...done    (Net-SNMP check)
+022/100 ...done    (Squid configuration compatibility check)
+023/100 ...done    (Reusable Configuration Files)
+024/100 ...done    (VCS repositories)
+025/100 ...done    (Added and extended options for BIND9 configuration)
+026/100 ...done    (Added options in DNSMASQ configuration)
+027/100 ...done    (Packages not signed by Red Hat)
+028/100 ...done    (Obsoleted rpms)
+029/100 ...done    (w3m not available in Red Hat Enterprise Linux 7)
+030/100 ...done    (report incompatibilities between Red Hat Enterprise Linux 6 and 7 in qemu-guest-agent package)
+031/100 ...done    (Removed options in coreutils binaries)
+032/100 ...done    (Removed options in gawk binaries)
+033/100 ...done    (Removed options in netstat binary)
+034/100 ...done    (Removed options in quota tools)
+035/100 ...done    (Removed rpms)
+036/100 ...done    (Replaced rpms)
+037/100 ...done    (GMP library incompatibilities)
+038/100 ...done    (optional channel problems)
+039/100 ...done    (package downgrades)
+040/100 ...done    (restore custom selinux configuration)
+041/100 ...done    (General)
+042/100 ...done    (samba shared directories selinux)
+043/100 ...done    (CUPS Browsing/BrowsePoll configuration)
+044/100 ...done    (CVS Package Split)
+045/100 ...done    (FreeRADIUS Upgrade Verification)
+046/100 ...done    (httpd configuration compatibility check)
+047/100 ...done    (bind-dyndb-ldap)
+048/100 ...done    (Identity Management Server compatibility check)
+049/100 ...done    (IPA Server CA Verification)
+050/100 ...done    (NTP configuration)
+051/100 ...done    (Information on time-sync.target)
+052/100 ...done    (OpenLDAP /etc/sysconfig and data compatibility)
+053/100 ...done    (OpenSSH sshd_config migration content)
+054/100 ...done    (OpenSSH sysconfig migration content)
+055/100 ...done    (Configuration for quota_nld service)
+056/100 ...done    (Disk quota netlink message daemon moved into quota-nld package)
+057/100 ...done    (SSSD compatibility check)
+058/100 ...done    (Luks encrypted partition)
+059/100 ...done    (Clvmd and cmirrord daemon management.)
+060/100 ...done    (State of LVM2 services.)
+061/100 ...done    (device-mapper-multipath configuration compatibility check)
+062/100 ...done    (Removal of scsi-target-utils)
+063/100 ...done    (Configuration for warnquota tool)
+064/100 ...done    (Disk quota tool warnquota moved into quota-warnquota package)
+065/100 ...done    (Check for Add-On availability)
+066/100 ...done    (Architecture Support)
+067/100 ...done    (Binary rebuilds)
+068/100 ...done    (Debuginfo packages)
+069/100 ...done    (Cluster and High Availablility)
+070/100 ...done    (fix krb5kdc config file)
+071/100 ...done    (File Systems, Partitions and Mounts Configuration Review)
+072/100 ...done    (Read Only FHS directories)
+073/100 ...done    (Red Hat Enterprise Linux Server variant)
+074/100 ...done    (Sonamebumped libs)
+075/100 ...done    (SonameKept Reusable Dynamic Libraries)
+076/100 ...done    (Removed .so libs)
+077/100 ...done    (In-place Upgrade Requirements for the /usr/ Directory)
+078/100 ...done    (CA certificate bundles modified)
+079/100 ...done    (Developer Tool Set packages)
+080/100 ...done    (Hyper-V)
+081/100 ...done    (Content for enabling and disabling services based on RHEL 6 system)
+082/100 ...done    (Check for ethernet interface naming)
+083/100 ...done    (User modification in /etc/rc.local and /etc/rc.d/rc.local)
+084/100 ...done    (cgroups configuration compatibility check)
+085/100 ...done    (Plugable authentication modules (PAM))
+086/100 ...done    (Foreign Perl modules)
+087/100 ...done    (Python 2.7.5)
+088/100 ...done    (Ruby 2.0.0)
+089/100 ...done    (SCL collections)
+090/100 ...done    (Red Hat Subscription Manager)
+091/100 ...done    (Red Hat Network Classic Unsupported)
+092/100 ...done    (System kickstart)
+093/100 ...done    (YUM)
+094/100 ...done    (Check for usage of dangerous range of UID/GIDs)
+095/100 ...done    (Incorrect usage of reserved UID/GIDs)
+096/100 ...done    (NIS ypbind config files back-up)
+097/100 ...done    (NIS Makefile back-up)
+098/100 ...done    (NIS server maps check)
+099/100 ...done    (NIS server MAXUID and MAXGID limits check)
+100/100 ...done    (NIS server config file back-up)
+Assessment finished (time 00:00s)
+Result table with checks and their results for main contents:
+---------------------------------------------------------------------------------------------------------------------------                                             ---
+|Configuration Files to Review                                                                               |notapplicable                                               |
+|File Lists for Manual Migration                                                                             |notapplicable                                               |
+|Bacula Backup Software                                                                                      |notapplicable                                               |
+|MySQL configuration                                                                                         |notapplicable                                               |
+|Migration of the MySQL data stack                                                                           |notapplicable                                               |
+|General changes in default MySQL implementation                                                             |notapplicable                                               |
+|PostgreSQL upgrade content                                                                                  |notapplicable                                               |
+|GNOME Desktop Environment underwent several design modifications in Red Hat Enterprise Linux 7 release      |notapplicable                                               |
+|KDE Desktop Environment underwent several design modifications in Red Hat Enterprise Linux 7 release        |notapplicable                                               |
+|several graphic drivers not supported in Red Hat Enterprise Linux 7                                         |notapplicable                                               |
+|several input drivers not supported in Red Hat Enterprise Linux 7                                           |notapplicable                                               |
+|several kernel networking drivers not available in Red Hat Enterprise Linux 7                               |notapplicable                                               |
+|several kernel storage drivers not available in Red Hat Enterprise Linux 7                                  |notapplicable                                               |
+|Names, Options and Output Format Changes in arptables                                                       |notapplicable                                               |
+|BIND9 running in a chroot environment check.                                                                |notapplicable                                               |
+|BIND9 configuration compatibility check                                                                     |notapplicable                                               |
+|Move dhcpd/dhcprelay arguments from /etc/sysconfig/* to *.service files                                     |notapplicable                                               |
+|DNSMASQ configuration compatibility check                                                                   |notapplicable                                               |
+|Dovecot configuration compatibility check                                                                   |notapplicable                                               |
+|Compatibility Between iptables and ip6tables                                                                |notapplicable                                               |
+|Net-SNMP check                                                                                              |notapplicable                                               |
+|Squid configuration compatibility check                                                                     |notapplicable                                               |
+|Reusable Configuration Files                                                                                |notapplicable                                               |
+|VCS repositories                                                                                            |notapplicable                                               |
+|Added and extended options for BIND9 configuration                                                          |notapplicable                                               |
+|Added options in DNSMASQ configuration                                                                      |notapplicable                                               |
+|Packages not signed by Red Hat                                                                              |notapplicable                                               |
+|Obsoleted rpms                                                                                              |notapplicable                                               |
+|w3m not available in Red Hat Enterprise Linux 7                                                             |notapplicable                                               |
+|report incompatibilities between Red Hat Enterprise Linux 6 and 7 in qemu-guest-agent package               |notapplicable                                               |
+|Removed options in coreutils binaries                                                                       |notapplicable                                               |
+|Removed options in gawk binaries                                                                            |notapplicable                                               |
+|Removed options in netstat binary                                                                           |notapplicable                                               |
+|Removed options in quota tools                                                                              |notapplicable                                               |
+|Removed rpms                                                                                                |notapplicable                                               |
+|Replaced rpms                                                                                               |notapplicable                                               |
+|GMP library incompatibilities                                                                               |notapplicable                                               |
+|optional channel problems                                                                                   |notapplicable                                               |
+|package downgrades                                                                                          |notapplicable                                               |
+|restore custom selinux configuration                                                                        |notapplicable                                               |
+|General                                                                                                     |notapplicable                                               |
+|samba shared directories selinux                                                                            |notapplicable                                               |
+|CUPS Browsing/BrowsePoll configuration                                                                      |notapplicable                                               |
+|CVS Package Split                                                                                           |notapplicable                                               |
+|FreeRADIUS Upgrade Verification                                                                             |notapplicable                                               |
+|httpd configuration compatibility check                                                                     |notapplicable                                               |
+|bind-dyndb-ldap                                                                                             |notapplicable                                               |
+|Identity Management Server compatibility check                                                              |notapplicable                                               |
+|IPA Server CA Verification                                                                                  |notapplicable                                               |
+|NTP configuration                                                                                           |notapplicable                                               |
+|Information on time-sync.target                                                                             |notapplicable                                               |
+|OpenLDAP /etc/sysconfig and data compatibility                                                              |notapplicable                                               |
+|OpenSSH sshd_config migration content                                                                       |notapplicable                                               |
+|OpenSSH sysconfig migration content                                                                         |notapplicable                                               |
+|Configuration for quota_nld service                                                                         |notapplicable                                               |
+|Disk quota netlink message daemon moved into quota-nld package                                              |notapplicable                                               |
+|SSSD compatibility check                                                                                    |notapplicable                                               |
+|Luks encrypted partition                                                                                    |notapplicable                                               |
+|Clvmd and cmirrord daemon management.                                                                       |notapplicable                                               |
+|State of LVM2 services.                                                                                     |notapplicable                                               |
+|device-mapper-multipath configuration compatibility check                                                   |notapplicable                                               |
+|Removal of scsi-target-utils                                                                                |notapplicable                                               |
+|Configuration for warnquota tool                                                                            |notapplicable                                               |
+|Disk quota tool warnquota moved into quota-warnquota package                                                |notapplicable                                               |
+|Check for Add-On availability                                                                               |notapplicable                                               |
+|Architecture Support                                                                                        |notapplicable                                               |
+|Binary rebuilds                                                                                             |notapplicable                                               |
+|Debuginfo packages                                                                                          |notapplicable                                               |
+|Cluster and High Availablility                                                                              |notapplicable                                               |
+|fix krb5kdc config file                                                                                     |notapplicable                                               |
+|File Systems, Partitions and Mounts Configuration Review                                                    |notapplicable                                               |
+|Read Only FHS directories                                                                                   |notapplicable                                               |
+|Red Hat Enterprise Linux Server variant                                                                     |notapplicable                                               |
+|Sonamebumped libs                                                                                           |notapplicable                                               |
+|SonameKept Reusable Dynamic Libraries                                                                       |notapplicable                                               |
+|Removed .so libs                                                                                            |notapplicable                                               |
+|In-place Upgrade Requirements for the /usr/ Directory                                                       |notapplicable                                               |
+|CA certificate bundles modified                                                                             |notapplicable                                               |
+|Developer Tool Set packages                                                                                 |notapplicable                                               |
+|Hyper-V                                                                                                     |notapplicable                                               |
+|Content for enabling and disabling services based on RHEL 6 system                                          |notapplicable                                               |
+|Check for ethernet interface naming                                                                         |notapplicable                                               |
+|User modification in /etc/rc.local and /etc/rc.d/rc.local                                                   |notapplicable                                               |
+|cgroups configuration compatibility check                                                                   |notapplicable                                               |
+|Plugable authentication modules (PAM)                                                                       |notapplicable                                               |
+|Foreign Perl modules                                                                                        |notapplicable                                               |
+|Python 2.7.5                                                                                                |notapplicable                                               |
+|Ruby 2.0.0                                                                                                  |notapplicable                                               |
+|SCL collections                                                                                             |notapplicable                                               |
+|Red Hat Network Classic Unsupported                                                                         |notapplicable                                               |
+|Red Hat Subscription Manager                                                                                |notapplicable                                               |
+|System kickstart                                                                                            |notapplicable                                               |
+|YUM                                                                                                         |notapplicable                                               |
+|Check for usage of dangerous range of UID/GIDs                                                              |notapplicable                                               |
+|Incorrect usage of reserved UID/GIDs                                                                        |notapplicable                                               |
+|NIS ypbind config files back-up                                                                             |notapplicable                                               |
+|NIS Makefile back-up                                                                                        |notapplicable                                               |
+|NIS server maps check                                                                                       |notapplicable                                               |
+|NIS server MAXUID and MAXGID limits check                                                                   |notapplicable                                               |
+|NIS server config file back-up                                                                              |notapplicable                                               |
+---------------------------------------------------------------------------------------------------------------------------                                             ---
+Tarball with results is stored here /root/preupgrade-results/preupg_results-200412091727.tar.gz .
+The latest assessment is stored in directory /root/preupgrade .
+Upload results to UI by command:
+e.g. preupg -u http://127.0.0.1:8099/submit/ -r /root/preupgrade-results/preupg_results-*.tar.gz .
