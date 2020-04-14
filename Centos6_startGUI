@@ -1,0 +1,4 @@
+    1  yum -y groupinstall “X Window System”
+    2   yum -y groupinstall “Desktop”
+    3  yum -y groupinstall “General Purpose Desktop”
+    4  startx
