@@ -7,3 +7,4 @@ JBOSS_OPTS="$JBOSS_OPTS -Djavax.net.ssl.trustStore=/opt/jboss/domain/configurati
 JBOSS_OPTS="$JBOSS_OPTS -Djavax.net.ssl.trustStorePassword=passw0rd"
 
 ~
+https://connectopensource.atlassian.net/wiki/spaces/CW/pages/775127275/JBoss+EAP+7+with+FIPS+140-2+Configuration
