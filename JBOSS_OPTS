@@ -1,0 +1,9 @@
+"/etc/default/jboss-eap.conf" 3
+## Additionals args to include in startup
+# JBOSS_OPTS="--admin-only -b 127.0.0.1"
+JBOSS_OPTS="$JBOSS_OPTS -Djavax.net.ssl.keyStore=/opt/jboss/domain/configuration/fiservcoreSept2018.jks"
+JBOSS_OPTS="$JBOSS_OPTS -Djavax.net.ssl.keyStorePassword=passw0rd"
+JBOSS_OPTS="$JBOSS_OPTS -Djavax.net.ssl.trustStore=/opt/jboss/domain/configuration/fiservcoreSept2018.jks"
+JBOSS_OPTS="$JBOSS_OPTS -Djavax.net.ssl.trustStorePassword=passw0rd"
+
+~
