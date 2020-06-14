@@ -1,0 +1,27 @@
+---
+  - name: create backup dir struture
+    hosts: all
+    become: true
+    tasks:
+
+
+    - stat:
+       path: "/tmp/logs/{{ansible_hostname}}_{{ansible_default_ipv4.address}}_{{ansible_date_time.date}}"
+      register: Backupdir_exist
+
+    - name: create dir
+      file:
+        path: "/tmp/logs/{{ansible_hostname}}_{{ansible_default_ipv4.address}}_{{ansible_date_time.date}}"
+        state: directory
+        mode: "u=rw-,g=rw-,o=---"
+        recurse: yes
+      when: Backupdir_exist.stat.exists == False
+
+    - debug:
+       msg: Dir exist
+      when:  Backupdir_exist.stat.exists == True
+
+
+    - name: command to copy log files
+      command: find /var/log/ -type f -name *.log -atime +1 -exec cp {} /tmp/logs/{{ansible_hostname}}_{{ansible_default_ipv4.address}}_{{ansible_date_time.date}} \;
+
