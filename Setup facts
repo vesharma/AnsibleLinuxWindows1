@@ -673,3 +673,22 @@ SSH password:
     },
     "changed": false
 }
+
+
+---
+  - hosts: all
+    become: true
+
+    tasks:
+    - copy:
+       content: |
+        HOSTNAME;KERNEL;
+         {% for host in hostvars %}
+         {% set vars = hostvars[host|string] %}
+         {{ vars.ansible_hostname }};{{ vars.ansible_kernel }}; {{ vars.ansible_architecture }}; {{ vars.ansible_architecture}};{{ vars.ansible_fqdn }};
+         {% endfor %}
+       dest: /root/system.csv
+       backup: yes
+       #run_once: yes
+       #delegate_to: localhost
+
